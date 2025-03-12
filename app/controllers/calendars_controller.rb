@@ -36,7 +36,7 @@ class CalendarsController < ApplicationController
       plans.each do |plan|
         today_plans.push(plan.plan) if plan.date == target_date
       end
-      days = { :month => target_date.month, :date => target_date.day, :wkday => wday, :plans => today_plans}
+      days = { month: target_date.month, date: target_date.day, wkday: wday, plans: today_plans}
       @week_days.push(days)
     end
 
